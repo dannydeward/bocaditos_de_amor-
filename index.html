@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<title >Bocaditos de Amor</title>
+<title>Bocaditos de Amor</title>
 
 <style>
 
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:white;   /* color hueso */
-    color:#8B3A3A;        /* color ladrillo */
+    background:#F8F1E7;
+    color:#8B3A3A;
 }
 
 header{
@@ -23,6 +23,7 @@ header h1{
     margin:0;
     text-align:center;
 }
+
 nav{
     text-align:right;
     font-size:18px;
@@ -49,7 +50,9 @@ footer{
     width:200px;
     border-radius:10px;
     margin-top:15px;
-     text-align:center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .whatsapp{
@@ -64,20 +67,16 @@ footer{
     text-decoration:none;
 }
 
-.gallery img{
-    width:20px;
-    margin:10px;
-}
-
 .galeria{
     display:flex;
     flex-wrap:wrap;
     gap:15px;
     margin-top:20px;
+    justify-content:center;
 }
 
 .galeria img{
-    width:15px;
+    width:200px;
     border-radius:8px;
 }
 
@@ -85,21 +84,21 @@ footer{
     text-align:center;
     font-size:24px;
     font-style:italic;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin:20px 0;
 }
 
 .equipo-fotos{
     display:flex;
-    justify-content:center;  /* centra el grupo */
-    gap:15px;              /* espacio entre fotos */
+    justify-content:center;
+    gap:15px;
     margin-top:20px;
+    flex-wrap:wrap;
 }
 
 .equipo-fotos img{
     width:180px;
-    height:300px;          /* misma altura que ancho → cuadrado */
-    object-fit:cover;      /* recorta la imagen sin deformarla */
+    height:180px;
+    object-fit:cover;
     border-radius:10px;
 }
 
@@ -113,6 +112,9 @@ footer{
     margin:0 auto 20px auto;
 }
 
+i{
+    margin-right:10px;
+}
 
 </style>
 </head>
@@ -128,132 +130,80 @@ footer{
 <a href="#hacemos">Que hacemos</a>
 <a href="#lograr">Que queremos lograr</a>
 </nav>
-
 </header>
 
 <p class="frase">
 "Sanar lo que está roto con amor no solo repara, sino que crea una historia más fuerte y hermosa."
 </p>
 
-<center><img class="foto-corazon" src="{{ url_for('static', filename='img/corazon.png') }}"></center>
+<img class="foto-maria" src="static/img/corazon.png">
 
-<p style="font-style:italic; text-align: right; ">Equipo Kintsugi Munay</p>"
-
+<p style="font-style:italic; text-align:right;">Equipo Kintsugi Munay</p>
 
 <section id="quienes">
-<h2  class="titulo-seccion">¿Quienes somos?</h2>
+<h2 class="titulo-seccion">¿Quienes somos?</h2>
 
-<p>Hola antes de presetarnos queremos presentar a la persona que nos inspiro a llevar adelante esta accion , ella es el corazon del p´royecto, lo viene ejecutando con sus propios recursos desde hace tiempo</p>
-<br>
-<p style="font-weight: bold;">María Elena: el corazon del proyecto</p>
-<br>
-<p>Vecina de los Naranjitos  desde los 2000, convirtió su hogar en el merendero "Bocadito de Amor" en 2013. Su generosidad brinda refugio a niños cuyos padres trabajan, ofreciendo amor y contención sin ayuda externa constante.
-</p>
+<p>Antes de presentarnos queremos destacar a quien nos inspiró: el corazón del proyecto.</p>
 
-<center><img class="foto-maria" src="{{ url_for('static', filename='img/Maria elena.jpg') }}"</center>
-<br>
+<p style="font-weight:bold;">María Elena</p>
 
-<p style="font-weight: bold;text-align: left;">Equipo Kintsugi Munay</p>
-<p style="text-align: justify;"> Somos un  equipo de estudiantes del curso de LIderazo y Desarrollo humano de la academia de coaching Ontologico Portal Matestro,  en nuestra filosofia de sanar con amor, hemos salido a buscar un proyecto comunitario para apoyarlo y dejar una huella a la comunidad jugando simepre ganar-ganar, la comunidad gana xon esta accion y nosotros ganamos con el aprendizaje </p>
+<p>Vecina de Los Naranjitos, convirtió su hogar en merendero en 2013, brindando amor y contención.</p>
+
+<img class="foto-maria" src="static/img/Maria elena.jpg">
+
+<p style="font-weight:bold;">Equipo Kintsugi Munay</p>
+
+<p>Somos estudiantes comprometidos con generar impacto social positivo en la comunidad.</p>
 
 <div class="equipo-fotos">
-
-<img src="{{ url_for('static', filename='img/1000054787.jpg') }}">
-<img src="{{ url_for('static', filename='img/1000054788.jpg') }}">
-<img src="{{ url_for('static', filename='img/1000054789.png') }}">
-
+<img src="static/img/1000054787.jpg">
+<img src="static/img/1000054788.jpg">
+<img src="static/img/1000054789.png">
 </div>
+
 </section>
-
-
 
 <section id="donde">
-<h2  class="titulo-seccion">¿Donde estamos?</h2>
-<p>El Barrio Los Naranjitos</p>
-<p>Ubicado a 50km de CABA, es un oasis de 200 familias humildes. Un lugar donde los niños juegan libremente entre verde y calles de tierra, lejos del ruido urbano.
-</p>
-<p>Nacido de familias trabajadoras que construyeron ladrillo a ladrillo. Hoy, la necesidad de un espacio comunitario seguro es vital para el desarrollo de los más jóvenes.
-</p>
-</section>
+<h2 class="titulo-seccion">¿Donde estamos?</h2>
 
+<p>Barrio Los Naranjitos, a 50km de CABA.</p>
+
+</section>
 
 <section id="hacemos">
-<h2  class="titulo-seccion">¿Que hacemos?</h2>
-<p>Actividades de la fundación.</p>
+<h2 class="titulo-seccion">¿Que hacemos?</h2>
 
-<p>la fundacion se dedica a tres Actividades:</p>
+<p><i class="fa-solid fa-utensils"></i> Alimentación diaria</p>
+<p><i class="fa-solid fa-book-open"></i> Educación</p>
+<p><i class="fa-solid fa-hand-holding-heart"></i> Contención</p>
 
-<p><i class="fa-solid fa-utensils"></i>Servicio de merienda diaria para más de 120 chicos del barrio, garantizando nutrición básicaServicio de merienda diaria para más de 120 chicos del barrio, garantizando nutrición básica</p>
-<p><i class="fa-solid fa-book-open"></i>Apoyo escolar y cursos de formación para jóvenes y adultos.</p>
-<p><i class="fa-solid fa-hand-holding-heart"></i>Un refugio seguro para que los niños no queden solos mientras sus padres trabajan.</p>
-
-<br>
-</p> Esta gran labor que se lleva adelante, le permite a los niños de la comunidad seguir sus sueños y todos queremos que alcancen sus sueños>
 </section>
-
 
 <section id="lograr">
-<h2  class="titulo-seccion">¿Que queremos lograr?</h2>
+<h2 class="titulo-seccion">¿Que queremos lograr?</h2>
 
-<p>
-Nuestro sueño es que la fundacion siga  creciendo  y poder ayudar a más
-personas cada día, brindando alimento, contención y esperanza a quienes
-más lo necesitan.
-</p>
+<p>Seguir creciendo y ayudar a más personas.</p>
 
-<p style="font-weight: bold; text-align: left; ">¿Como lo haremos?</p>
-
-<p> el primer paso es  acondiconar los espacios que quedaron a medio construir, un baños, las paredes, el piso </p>
-
-<p><i class="fa-solid fa-toilet"></i>Terminación de Pisos: El salón cuenta con ladrillos sueltos; necesita finalizacion para ser habitable
-<p><i class="fa-solid fa-bolt"></i>Baño Completo: Falta la instalación sanitaria final y revestimientos para garantizar higiene y dignidad
-<p><i class="fa-solid fa-paint-roller"></i>Protección y Color: Pintura de paredes para proteger la obra y brindar un ambiente alegre y estimulante
-<p><i class="fa-solid fa-bolt"></i>Instalaciones Finales: Detalles eléctricos y de aberturas que garanticen la seguridad de los chicos
-
+<p><i class="fa-solid fa-toilet"></i> Baños</p>
+<p><i class="fa-solid fa-bolt"></i> Electricidad</p>
+<p><i class="fa-solid fa-paint-roller"></i> Pintura</p>
 
 <div class="equipo-fotos">
-
-<img src="{{ url_for('static', filename='img/entrada.png') }}">
-<img src="{{ url_for('static', filename='img/porton.png') }}">
-<img src="{{ url_for('static', filename='img/merendero.png') }}">
-<img src="{{ url_for('static', filename='img/piso a reparar.png') }}">
-<img src="{{ url_for('static', filename='img/baño a reparar.png') }}">
-
-</div>
-
-
-<br>
- 
-<h2  class="titulo-seccion">¿Como nos puedes ayudar?</h2>
-
-
-<p> si este proyecto te motiva y quieres ayudarnos a dejar una huella, puedes colbroar con una donacion en materiales, alimentos, efectivo, que sera canalizada por nuestro capitan de equipo, para hacerlos escribenos al whatsapp o envianos un mail  a los datos que encontrar a pie de pagina y  canalizamos tu donacion</p>
-
-
-</section>
-
-
-</section>
-
-<div class="gallery">
-
-{% for file in files %}
-<img src="{{ url_for('static', filename='uploads/' + file) }}">
-{% endfor %}
-
+<img src="static/img/entrada.png">
+<img src="static/img/porton.png">
+<img src="static/img/merendero.png">
+<img src="static/img/piso a reparar.png">
+<img src="static/img/baño a reparar.png">
 </div>
 
 </section>
-
 
 <footer>
-<p>Contacto: ramdanny@gmail.comm</p>
+<p>Contacto: ramdanny@gmail.com</p>
 <p>Ubicación: Buenos Aires</p>
-
 </footer>
 
-
-<a class="whatsapp" href="https://w.app/5q93ox">W</a>
+<a class="whatsapp" href="https://wa.me/549000000000">W</a>
 
 </body>
 </html>
